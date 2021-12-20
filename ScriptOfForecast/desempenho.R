@@ -20,7 +20,8 @@ desemMAE = function(U, previsoes, N=1, N_M){
                             metricaMAE[2],
                             metricaMAE[3],
                             metricaMAE[4],
-                            metricaMAE[5]))
+                            metricaMAE[5],
+                            metricaMAE[6]))
 }
 
 desemRMSE = function(U, previsoes, N=1, N_M){
@@ -33,7 +34,8 @@ desemRMSE = function(U, previsoes, N=1, N_M){
                             metricaRMSE[2],
                             metricaRMSE[3],
                             metricaRMSE[4],
-                            metricaRMSE[5]))
+                            metricaRMSE[5],
+                            metricaRMSE[6]))
 }
 
  DESEMPENHOtotal = function(u, previsoes, type){
@@ -57,9 +59,10 @@ IMPRIMIRdesem = function(DATEmae, DATErmse){
                          GARCH = c(DATEmae$X2, DATEmae$X2.1, DATErmse$X2, DATErmse$X2.1),
                          MEDIA = c(DATEmae$X3, DATEmae$X3.1, DATErmse$X3, DATErmse$X3.1),
                          MEDIANA = c(DATEmae$X4, DATEmae$X4.1, DATErmse$X4, DATErmse$X4.1),
-                         MV = c(DATEmae$X5, DATEmae$X5.1, DATErmse$X5, DATErmse$X5.1))
+                         MV = c(DATEmae$X5, DATEmae$X5.1, DATErmse$X5, DATErmse$X5.1),
+                         CACOULLOS = c(DATEmae$X6, DATEmae$X6.1, DATErmse$X6, DATErmse$X6.1))
   DATAdesem = cbind(" " = c("MAE treino","MAE teste", "RMSE treinamento", "RMSE teste"), DATAdesem_og)
-  
+  return(DATAdesem)
 }
 
 
